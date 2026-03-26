@@ -1,4 +1,4 @@
-name: Build & Test & Install (Unix)
+name: CI
 
 on:
   push:
