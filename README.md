@@ -3,8 +3,10 @@
 [![iniparser](https://img.shields.io/badge/INI_Parser-8A2BE2)](https://github.com/abin-z/inifile)
 [![headeronly](https://img.shields.io/badge/Header_Only-green)](https://github.com/abin-z/inifile/blob/main/include/inifile/inifile.h)
 [![moderncpp](https://img.shields.io/badge/Modern_C%2B%2B-218c73)](https://learn.microsoft.com/en-us/cpp/cpp/welcome-back-to-cpp-modern-cpp?view=msvc-170)
+[![cpp](https://img.shields.io/badge/Compatibility-C++11-darkgreen.svg)](https://isocpp.org)
 [![licenseMIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/license/MIT)
 [![version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/abin-z/inifile/releases)
+[![ci](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml/badge.svg)](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml)
 
 🌍 Languages/语言:  [English](README.md)  |  [简体中文](README.zh-CN.md)
 
