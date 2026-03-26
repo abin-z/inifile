@@ -72,7 +72,9 @@ endif()
 if(INIFILE_BUILD_TESTS)
   message(STATUS "[inifile] Building tests...")
   include(CTest)  # enable add_test
-  add_subdirectory(external/Catch2)
+  if(NOT TARGET Catch2::Catch2)
+    add_subdirectory(external/Catch2)
+  endif()
   add_subdirectory(tests)
 endif()
 
