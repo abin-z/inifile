@@ -159,8 +159,10 @@ key = value
    ```cpp
    #include <inifile/inifile.h>
    ```
-   
+
 </details>
+
+---
 
 ### 🛠️ 基础使用案例
 

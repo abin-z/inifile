@@ -98,6 +98,9 @@ key = value
 
 **Method 3: As a submodule / source integration (`add_subdirectory`)**
 
+<details>
+<summary>Show details</summary>
+
 1. Add `inifile` as a submodule:
 
    ```bash
@@ -117,7 +120,12 @@ key = value
    #include <inifile/inifile.h>
    ```
 
+</details>
+
 **Method 4: Install and use `find_package` (recommended for release / multi-project usage)**
+
+<details>
+<summary>Show details</summary>
 
 1. Build and install the library:
 
@@ -152,6 +160,10 @@ key = value
    ```cpp
    #include <inifile/inifile.h>
    ```
+
+</details>
+
+---
 
 ### 🛠️ Examples
 
