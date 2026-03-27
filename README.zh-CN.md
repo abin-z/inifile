@@ -97,6 +97,9 @@ key = value
 
 **方式3: 作为子模块 / 源码集成（`add_subdirectory`）**
 
+<details>
+<summary>点击查看</summary>
+
 1. 在您的项目中添加 `inifile` 作为子模块（或者直接复制源码）
 
    ```bash
@@ -115,8 +118,14 @@ key = value
    ```cpp
    #include <inifile/inifile.h>
    ```
+   
+
+</details>
 
 **方式 4：安装后使用 `find_package`（推荐用于发布 / 多项目复用）**
+
+<details>
+<summary>点击查看</summary>
 
 1. 构建并安装库
 
@@ -151,6 +160,9 @@ key = value
    ```cpp
    #include <inifile/inifile.h>
    ```
+   
+
+</details>
 
 ### 🛠️ 基础使用案例
 
