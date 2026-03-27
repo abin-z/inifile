@@ -61,10 +61,29 @@ jobs:
 
           if ('${{ matrix.compiler }}' -eq 'msvc') {
               cmake -S tests/installed_test -B build_installed -G "Visual Studio 17 2022" -A x64 -DCMAKE_PREFIX_PATH="$install_path"
-              cmake --build build_installed --config ${{ matrix.build_type }}
+              cmake --build build_installed --config ${{ matrix.build_type }} --parallel
           } else {
               $cc_name = if ('${{ matrix.compiler }}' -eq 'clang') { 'clang' } else { 'gcc' }
               $cxx_name = if ('${{ matrix.compiler }}' -eq 'clang') { 'clang++' } else { 'g++' }
               cmake -S tests/installed_test -B build_installed -G Ninja -DCMAKE_C_COMPILER="$cc_name" -DCMAKE_CXX_COMPILER="$cxx_name" -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCMAKE_PREFIX_PATH="$install_path"
-              cmake --build build_installed
+              cmake --build build_installed --parallel
+          }
+
+      - name: Test FetchContent usage
+        shell: pwsh
+        run: |
+          if ('${{ matrix.compiler }}' -eq 'msvc') {
+              cmake -S tests/fetchcontent_test -B build_fetchcontent -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+              cmake --build build_fetchcontent --config ${{ matrix.build_type }} --parallel
+          } else {
+              $cc_name = if ('${{ matrix.compiler }}' -eq 'clang') { 'clang' } else { 'gcc' }
+              $cxx_name = if ('${{ matrix.compiler }}' -eq 'clang') { 'clang++' } else { 'g++' }
+
+              cmake -S tests/fetchcontent_test -B build_fetchcontent `
+                -G Ninja `
+                -DCMAKE_C_COMPILER="$cc_name" `
+                -DCMAKE_CXX_COMPILER="$cxx_name" `
+                -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+              cmake --build build_fetchcontent --parallel
           }
