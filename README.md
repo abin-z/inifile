@@ -68,7 +68,35 @@ key = value
    #include "inifile.h"
    ```
 
-**Method 2: As a submodule / source integration (`add_subdirectory`)**
+**Method 2: Using FetchContent**
+
+1. In your `CMakeLists.txt`:
+
+   ```cmake
+   include(FetchContent)
+   
+   FetchContent_Declare(
+     inifile
+     GIT_REPOSITORY https://github.com/abin-z/inifile.git
+     GIT_TAG v1.0.0
+   )
+   
+   FetchContent_MakeAvailable(inifile)
+   
+   # ============== Link directly ==============
+   add_executable(app src/main.cpp)
+   target_link_libraries(app PRIVATE inifile::inifile)
+   ```
+
+   > 💡 It is recommended to use a fixed version tag (e.g. `GIT_TAG v1.0.0`) in production to ensure reproducible builds.
+
+2. In your source code:
+
+   ```cpp
+   #include <inifile/inifile.h>
+   ```
+
+**Method 3: As a submodule / source integration (`add_subdirectory`)**
 
 1. Add `inifile` as a submodule:
 
@@ -89,7 +117,7 @@ key = value
    #include <inifile/inifile.h>
    ```
 
-**Method 3: Install and use `find_package` (recommended for release / multi-project usage)**
+**Method 4: Install and use `find_package` (recommended for release / multi-project usage)**
 
 1. Build and install the library:
 

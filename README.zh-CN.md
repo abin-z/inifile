@@ -67,8 +67,35 @@ key = value
    #include "inifile.h"
    ````
 
+**方式2: 使用 FetchContent**
 
-**方式2: 作为子模块 / 源码集成（`add_subdirectory`）**
+1. 在你的 `CMakeLists.txt` 中：
+
+   ```cmake
+   include(FetchContent)
+   
+   FetchContent_Declare(
+     inifile
+     GIT_REPOSITORY https://github.com/abin-z/inifile.git
+     GIT_TAG v1.0.0
+   )
+   
+   FetchContent_MakeAvailable(inifile)
+   
+   # ============== 直接 link 即可 ==============
+   add_executable(app src/main.cpp)
+   target_link_libraries(app PRIVATE inifile::inifile)
+   ```
+
+   > 💡 建议在生产环境中使用固定版本（如 `GIT_TAG v1.0.0`），以保证构建的可重复性。
+
+2. 源代码中:
+
+   ```cpp
+   #include <inifile/inifile.h>
+   ```
+
+**方式3: 作为子模块 / 源码集成（`add_subdirectory`）**
 
 1. 在您的项目中添加 `inifile` 作为子模块（或者直接复制源码）
 
@@ -89,7 +116,7 @@ key = value
    #include <inifile/inifile.h>
    ```
 
-**方式 3：安装后使用 `find_package`（推荐用于发布 / 多项目复用）**
+**方式 4：安装后使用 `find_package`（推荐用于发布 / 多项目复用）**
 
 1. 构建并安装库
 
