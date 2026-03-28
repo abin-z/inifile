@@ -7,6 +7,8 @@
 [![licenseMIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/license/MIT)
 [![version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/abin-z/inifile/releases)
 [![ci](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml/badge.svg)](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml)
+[![ci](https://github.com/abin-z/inifile/actions/workflows/cmake_windows.yml/badge.svg)](https://github.com/abin-z/inifile/actions/workflows/cmake_windows.yml)
+
 
 🌍 Languages/语言:  [English](README.md)  |  [简体中文](README.zh-CN.md)
 
