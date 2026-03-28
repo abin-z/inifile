@@ -1,4 +1,4 @@
-name: Build & Test & Install (Windows)
+name: Windows
 
 on:
   push:
