@@ -75,5 +75,5 @@ int main()
   // Load from file and print
   ini::inifile loadinif;
   loadinif.load(path);
-  std::cout << loadinif.to_string() << std::endl;
+  std::cout << loadinif.to_string() << '\n';
 }

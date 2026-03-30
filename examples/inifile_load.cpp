@@ -18,13 +18,13 @@ int main()
 
   if (inif.load(path))
   {
-    std::cout << "Result: Ini file loaded successfully" << std::endl;
-    std::cout << "--------------------------------------" << std::endl;
-    std::cout << inif.to_string() << std::endl;
-    std::cout << "--------------------------------------" << std::endl;
+    std::cout << "Result: Ini file loaded successfully\n";
+    std::cout << "--------------------------------------\n";
+    std::cout << inif.to_string() << '\n';
+    std::cout << "--------------------------------------" << '\n';
   }
   else
   {
-    std::cout << "Result: Failed to load ini file" << std::endl;
+    std::cout << "Result: Failed to load ini file" << '\n';
   }
 }

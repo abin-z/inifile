@@ -49,7 +49,7 @@ int main()
   //// ini data to string
   // std::string content = inif.to_string();
 
-  std::cout << "~~~~~~~~~~~~~~~~~write inifile contents~~~~~~~~~~~~~~~~~" << std::endl;
-  std::cout << content << std::endl;
-  std::cout << "~~~~~~~~~~~~~~~~~write inifile contents~~~~~~~~~~~~~~~~~" << std::endl;
+  std::cout << "~~~~~~~~~~~~~~~~~write inifile contents~~~~~~~~~~~~~~~~~\n";
+  std::cout << content << '\n';
+  std::cout << "~~~~~~~~~~~~~~~~~write inifile contents~~~~~~~~~~~~~~~~~\n";
 }

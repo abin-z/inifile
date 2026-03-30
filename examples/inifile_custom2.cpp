@@ -59,7 +59,7 @@ void print_vector(const std::vector<T> &vec)
       std::cout << ", ";
     }
   }
-  std::cout << "]" << std::endl;
+  std::cout << "]" << '\n';
 }
 
 int main()
@@ -87,7 +87,7 @@ int main()
   print_vector(v3);
 
   // Print the entire INI file content as a string
-  std::cout << "ini info:\n" << inif.to_string() << std::endl;
+  std::cout << "ini info:\n" << inif.to_string() << '\n';
 
   return 0;  // Exit the program
 }

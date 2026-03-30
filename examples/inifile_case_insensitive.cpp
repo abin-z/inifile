@@ -30,33 +30,33 @@ int main()
   auto copy_inif = inif;               // Copy the ini file object
 
   // Test case-insensitive section and key access
-  std::cout << R"(inif.contains("Section") = )" << inif.contains("Section") << std::endl;
-  std::cout << R"(inif.contains("SECTION") = )" << inif.contains("SECTION") << std::endl;
-  std::cout << R"(inif.contains("SeCtIoN") = )" << inif.contains("SeCtIoN") << std::endl;
+  std::cout << R"(inif.contains("Section") = )" << inif.contains("Section") << '\n';
+  std::cout << R"(inif.contains("SECTION") = )" << inif.contains("SECTION") << '\n';
+  std::cout << R"(inif.contains("SeCtIoN") = )" << inif.contains("SeCtIoN") << '\n';
 
-  std::cout << R"(inif.at("section").contains("key") = )" << inif.at("section").contains("key") << std::endl;
-  std::cout << R"(inif.at("section").contains("Key") = )" << inif.at("section").contains("Key") << std::endl;
-  std::cout << R"(inif.at("SECTION").contains("KEY") = )" << inif.at("SECTION").contains("KEY") << std::endl;
-  std::cout << R"(inif.at("SECTION").contains("flag") = )" << inif.at("SECTION").contains("flag") << std::endl;
-  std::cout << R"(inif.at("SECTION").contains("FLAG") = )" << inif.at("SECTION").contains("FLAG") << std::endl;
+  std::cout << R"(inif.at("section").contains("key") = )" << inif.at("section").contains("key") << '\n';
+  std::cout << R"(inif.at("section").contains("Key") = )" << inif.at("section").contains("Key") << '\n';
+  std::cout << R"(inif.at("SECTION").contains("KEY") = )" << inif.at("SECTION").contains("KEY") << '\n';
+  std::cout << R"(inif.at("SECTION").contains("flag") = )" << inif.at("SECTION").contains("flag") << '\n';
+  std::cout << R"(inif.at("SECTION").contains("FLAG") = )" << inif.at("SECTION").contains("FLAG") << '\n';
 
-  std::cout << "section-key: " << inif["section"]["key"].as<std::string>() << std::endl;
-  std::cout << "SECTION-KEY: " << inif["SECTION"]["KEY"].as<std::string>() << std::endl;
-  std::cout << "Section-Key: " << inif["Section"]["Key"].as<std::string>() << std::endl;
+  std::cout << "section-key: " << inif["section"]["key"].as<std::string>() << '\n';
+  std::cout << "SECTION-KEY: " << inif["SECTION"]["KEY"].as<std::string>() << '\n';
+  std::cout << "Section-Key: " << inif["Section"]["Key"].as<std::string>() << '\n';
 
-  std::cout << "section-hello: " << inif["section"]["hello"].as<std::string>() << std::endl;
-  std::cout << "SECTION-HELLO: " << inif["SECTION"]["HELLO"].as<std::string>() << std::endl;
-  std::cout << "Section-Hello: " << inif["Section"]["Hello"].as<std::string>() << std::endl;
+  std::cout << "section-hello: " << inif["section"]["hello"].as<std::string>() << '\n';
+  std::cout << "SECTION-HELLO: " << inif["SECTION"]["HELLO"].as<std::string>() << '\n';
+  std::cout << "Section-Hello: " << inif["Section"]["Hello"].as<std::string>() << '\n';
 
-  std::cout << "section-Flag: " << inif["section"]["Flag"].as<int>() << std::endl;
-  std::cout << "SECTION-FLAG: " << inif["SECTION"]["FLAG"].as<int>() << std::endl;
-  std::cout << "Section-flag: " << inif["Section"]["flag"].as<int>() << std::endl;
+  std::cout << "section-Flag: " << inif["section"]["Flag"].as<int>() << '\n';
+  std::cout << "SECTION-FLAG: " << inif["SECTION"]["FLAG"].as<int>() << '\n';
+  std::cout << "Section-flag: " << inif["Section"]["flag"].as<int>() << '\n';
 
-  std::cout << "~~~~~~~~~~~~~~~~~ After the visit ini contents ~~~~~~~~~~~~~~~~~" << std::endl;
-  std::cout << inif.to_string() << std::endl;
+  std::cout << "~~~~~~~~~~~~~~~~~ After the visit ini contents ~~~~~~~~~~~~~~~~~" << '\n';
+  std::cout << inif.to_string() << '\n';
 
-  std::cout << "~~~~~~~~~~~~~~~~~ original ini contents ~~~~~~~~~~~~~~~~~" << std::endl;
-  std::cout << copy_inif.to_string() << std::endl;
-  std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+  std::cout << "~~~~~~~~~~~~~~~~~ original ini contents ~~~~~~~~~~~~~~~~~" << '\n';
+  std::cout << copy_inif.to_string() << '\n';
+  std::cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << '\n';
   return 0;
 }

@@ -32,20 +32,20 @@ int main()
   // ini::inifile inif;
   // inif.from_string(str);
 
-  std::cout << "~~~~~~~~~~~~~~~~~read ini contents~~~~~~~~~~~~~~~~~" << std::endl;
-  std::cout << "inifile has " << inif.size() << " sections" << std::endl;
+  std::cout << "~~~~~~~~~~~~~~~~~read ini contents~~~~~~~~~~~~~~~~~\n";
+  std::cout << "inifile has " << inif.size() << " sections\n";
   for (const auto &sec_pair : inif)
   {
     const std::string &section_name = sec_pair.first;
     const ini::section &section = sec_pair.second;
-    std::cout << "  section '" << section_name << "' has " << section.size() << " key-values." << std::endl;
+    std::cout << "  section '" << section_name << "' has " << section.size() << " key-values.\n";
 
     for (const auto &kv : section)
     {
       const std::string &key = kv.first;
       const auto &value = kv.second;
-      std::cout << "    kv: '" << key << "' = '" << value << "'" << std::endl;
+      std::cout << "    kv: '" << key << "' = '" << value << "'\n";
     }
   }
-  std::cout << "~~~~~~~~~~~~~~~~~read ini contents~~~~~~~~~~~~~~~~~" << std::endl;
+  std::cout << "~~~~~~~~~~~~~~~~~read ini contents~~~~~~~~~~~~~~~~~\n";
 }

@@ -53,10 +53,10 @@ int main()
   bool isok = inif.save(path);
   if (isok)
   {
-    std::cout << "Result: Saved ini file successfully" << std::endl;
+    std::cout << "Result: Saved ini file successfully\n";
   }
   else
   {
-    std::cout << "Result: Failed to save ini file" << std::endl;
+    std::cout << "Result: Failed to save ini file\n";
   }
 }

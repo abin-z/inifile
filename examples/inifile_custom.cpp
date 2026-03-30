@@ -29,7 +29,7 @@ struct Person
 
 void print_person(const Person &p)
 {
-  std::cout << "Person{id=" << p.id << ", age=" << p.age << ", name=\"" << p.name << "\"}" << std::endl;
+  std::cout << "Person{id=" << p.id << ", age=" << p.age << ", name=\"" << p.name << "\"}";
 }
 
 /// @brief Custom type conversion (Use INIFILE_TYPE_CONVERTER to specialize Person)
