@@ -149,7 +149,7 @@ key = value
 2. In your project:
 
    ```cmake
-   list(APPEND CMAKE_PREFIX_PATH "/your/install/path/lib/cmake/inifile")
+   set(inifile_DIR "/your/install/path/lib/cmake/inifile")
    find_package(inifile REQUIRED)
    
    add_executable(app src/main.cpp)
