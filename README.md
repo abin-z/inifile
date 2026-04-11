@@ -5,7 +5,7 @@
 [![moderncpp](https://img.shields.io/badge/Modern_C%2B%2B-218c73)](https://learn.microsoft.com/en-us/cpp/cpp/welcome-back-to-cpp-modern-cpp?view=msvc-170)
 [![cpp](https://img.shields.io/badge/Compatibility-C++11-darkgreen.svg)](https://isocpp.org)
 [![licenseMIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/license/MIT)
-[![version](https://img.shields.io/badge/version-1.0.0-green)](https://github.com/abin-z/inifile/releases)
+[![version](https://img.shields.io/badge/version-1.0.1-green)](https://github.com/abin-z/inifile/releases)
 [![ci](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml/badge.svg)](https://github.com/abin-z/inifile/actions/workflows/cmake_unix.yml)
 [![ci](https://github.com/abin-z/inifile/actions/workflows/cmake_windows.yml/badge.svg)](https://github.com/abin-z/inifile/actions/workflows/cmake_windows.yml)
 
@@ -79,7 +79,7 @@ key = value
    FetchContent_Declare(
      inifile
      GIT_REPOSITORY https://github.com/abin-z/inifile.git
-     GIT_TAG v1.0.0
+     GIT_TAG v1.0.1
    )
    
    FetchContent_MakeAvailable(inifile)
@@ -89,7 +89,7 @@ key = value
    target_link_libraries(app PRIVATE inifile::inifile)
    ```
 
-   > 💡 It is recommended to use a fixed version tag (e.g. `GIT_TAG v1.0.0`) in production to ensure reproducible builds.
+   > 💡 It is recommended to use a fixed version tag (e.g. `GIT_TAG v1.0.1`) in production to ensure reproducible builds.
 
 2. In your source code:
 
