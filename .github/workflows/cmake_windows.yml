@@ -16,6 +16,7 @@ jobs:
         compiler: [msvc, clang, mingw]
         build_type: [Debug, Release]
 
+    # Note: windows-2022 includes Visual Studio 2022, which provides MSVC, Clang, and MinGW toolchains.
     runs-on: windows-2022
 
     steps:
