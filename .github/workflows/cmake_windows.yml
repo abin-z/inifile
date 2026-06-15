@@ -16,7 +16,7 @@ jobs:
         compiler: [msvc, clang, mingw]
         build_type: [Debug, Release]
 
-    runs-on: windows-latest
+    runs-on: windows-2022
 
     steps:
       - uses: actions/checkout@v4
@@ -38,7 +38,7 @@ jobs:
         shell: pwsh
         run: |
           if ('${{ matrix.compiler }}' -eq 'msvc') {
-            cmake -S . -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+            cmake -S . -B build -G "Visual Studio 17 2022" -A x64
           } elseif ('${{ matrix.compiler }}' -eq 'clang') {
             cmake -S . -B build -G Ninja -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
           } else {
