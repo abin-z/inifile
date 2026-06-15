@@ -48,7 +48,7 @@ int main()
   inif["section"]["key"].add_comment("Extra comment line1.");
   inif["section"]["key"].comment().add("Extra comment line2.");
 
-  // Set multi-line section and key comments 
+  // Set multi-line section and key comments
   inif["section"].set_comment("section-comment line1\nsection-comment line2\nsection-comment line3", '#');
 
   inif["section"]["key"].comment().add({
@@ -64,10 +64,15 @@ int main()
 
   // Access comment object
   ini::comment &cmt = inif["section"]["key"].comment();  // get reference to comment
+  cmt.add("Additional comment line added via reference.");  // modify comment through reference
 
   // Read comment content
   const std::vector<std::string> &view = inif["section"]["key"].comment().view();       // view (non-owning)
   std::vector<std::string>     cmt_vtr = inif["section"]["key"].comment().to_vector();  // deep copy
+  for (const auto &line : view)
+  {
+    std::cout << R"(inif["section"]["key"] Comment line: ")" << line << '"' << '\n';
+  }
 
   // Save to file
   inif.save(path);

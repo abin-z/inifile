@@ -45,6 +45,14 @@ void save_func()
   inif["section"]["key1"].set_comment("This is a key-value pairs comment", '#');  // set key=value pairs comment
 
   bool isok = inif.save(path);
+  if (isok)
+  {
+    std::cout << "INI file saved successfully." << std::endl;
+  }
+  else
+  {
+    std::cout << "Failed to save INI file." << std::endl;
+  }
 }
 
 void load_func()
